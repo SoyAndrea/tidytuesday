@@ -8,7 +8,8 @@ winners <- tuesdata$winners
 
 palet  <- c("#f18701", "#f7b801", "#7678ed", "#3d348b")
 
-  week17 <- count(winners, Nationality, Category) %>%   
+
+count(winners, Nationality, Category) %>%   
     plot_ly(x=~Nationality, y=~n,  type = 'bar', 
                   color = ~Category, colors = palet) %>% 
   layout(
@@ -24,5 +25,3 @@ palet  <- c("#f18701", "#f7b801", "#7678ed", "#3d348b")
            xanchor='right', yanchor='auto', xshift=0, yshift=0,
            font=list(size=12, color="black"))
     )
-
-week17
