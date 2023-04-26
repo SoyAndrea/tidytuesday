@@ -12,17 +12,17 @@ palet  <- c("#f18701", "#f7b801", "#7678ed", "#3d348b")
     plot_ly(x=~Nationality, y=~n,  type = 'bar', 
                   color = ~Category, colors = palet) %>% 
   layout(
-    title = list(text= "Winners of London marathon by Nationality in each category from 1981 - 2022", 
-                 font=list(size=14, color="black")),
+    title =  "Winners of London marathon by Nationality in each category from 1981 - 2022",
               yaxis = list(title = 'Number of winners', range= c(0,50)), 
               xaxis = list(title = 'Nationality', categoryorder = "total descending",
                            tickangle = -45),
               barmode = "stack",bargap = 2, plot_bgcolor='white',
-    annotations = 
-      list(x = 0.7, y = -0.4, 
+    annotations =
+      list(x = 0.7, y = -0.4,
            text = "Source: Nicola Rennie's London Marathon R package",
            showarrow = F, xref='paper', yref='paper',
            xanchor='right', yanchor='auto', xshift=0, yshift=0,
-           font=list(size=12, color="black")))
+           font=list(size=12, color="black"))
+    )
 
 week17
